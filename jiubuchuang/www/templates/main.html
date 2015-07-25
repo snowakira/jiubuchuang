@@ -1,0 +1,143 @@
+<ion-view title="就步窗">
+  <ion-header-bar class="bar-royal item-input-inset">
+  <a class="button button-clear icon ion-plus"></a>
+  <label class="item-input-wrapper">
+    <i class="icon ion-ios-search placeholder-icon"></i>
+    <input type="search" placeholder="找你感兴趣的展会或刊物">
+  </label>
+  <a class="button button-clear icon ion-navicon"></a>
+</ion-header-bar>
+<ion-content class="padding">
+<div style="height:100px">
+  <ion-slide-box does-continue="true" auto-play="true" show-pager="false" ng-if="ads">
+  <ion-slide ng-repeat="ad in ads">
+  <a>
+    <img width=100% height=100px ng-src="{{ad.url}}" >
+  </a>
+</ion-slide>
+</ion-slide-box>
+</div>
+
+<div class="list card">
+  <div class="item item-divider item-royal">
+    <span style="float:left">展会</span>
+    <span class="more"><a href="#/app/tabs/exhibitions">更多</a></span>
+  </div>
+  <!-- <div class="item item-avatar" > -->
+  <ion-slide-box does-continue="true" auto-play="false" show-pager="false" ng-if="ads">
+  <ion-slide ng-repeat="ad in adExhs">
+  <div class="row" >
+    <div class="col-30">
+      <div class="card" >
+        <div><img width="100%" height=220px ng-src="{{ad.url[0]}}" ng-click="go('app.exhibition',{{ad.id[0]}})"/></div>
+        <div>{{ad.cp[0]}}</div>
+        <div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" >{{ad.title[0]}}</div>
+      </div>
+    </div>
+
+    <div class="col-30">
+      <div class="card" >
+        <div><img width="100%" height=220px ng-src="{{ad.url[1]}}" ng-click="myCheck()"/></div>
+        <div>{{ad.cp[1]}}</div>
+        <div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" >{{ad.title[1]}}</div>
+
+      </div>
+    </div>
+
+    <div class="col-30">
+      <div class="card" >
+        <div><img width="100%" height=220px ng-src="{{ad.url[2]}}" ng-click="myCheck()"/></div>
+        <div>{{ad.cp[2]}}</div>
+        <div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" >
+          {{ad.title[2]}}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</ion-slide>
+</ion-slide-box>
+</div>
+
+<div class="list card">
+  <div class="item item-divider item-royal">
+    <span style="float:left">刊物</span>
+    <span class="more"><a href="#/tab/chats">更多</a></span>
+  </div>
+  <ion-slide-box does-continue="true" auto-play="false" show-pager="false" ng-if="ads">
+  <ion-slide ng-repeat="ad in adBooks">
+    <div class="row" >
+      <div class="col-30">
+        <div class="card" >
+          <div><img width="100%" height=220px ng-src="{{ad.url[0]}}" ng-click="myCheck()"/></div>
+          <div>{{ad.cp[0]}}</div>
+          <div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" >{{ad.title[0]}}</div>
+        </div>
+      </div>
+
+      <div class="col-30">
+        <div class="card" >
+          <div><img width="100%" height=220px ng-src="{{ad.url[1]}}" ng-click="myCheck()"/></div>
+          <div>{{ad.cp[1]}}</div>
+          <div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" >{{ad.title[1]}}</div>
+
+        </div>
+      </div>
+
+      <div class="col-30">
+        <div class="card" >
+          <div><img width="100%" height=220px ng-src="{{ad.url[2]}}" ng-click="myCheck()"/></div>
+          <div>{{ad.cp[2]}}</div>
+          <div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" >
+            {{ad.title[2]}}
+          </div>
+
+        </div>
+      </div>
+    </div>
+</ion-slide>
+</ion-slide-box>
+</div>
+
+<div class="list card">
+  <div class="item item-divider item-royal">
+    <span style="float:left">周边</span>
+    <span class="more"><a href="#/tab/chats">更多</a></span>
+  </div>
+  <ion-slide-box does-continue="true" auto-play="false" show-pager="false" ng-if="ads">
+  <ion-slide ng-repeat="ad in adStuffs">
+    <div class="row" >
+      <div class="col-30">
+        <div class="card" >
+          <div><img width="100%" height=220px ng-src="{{ad.url[0]}}" ng-click="myCheck()"/></div>
+          <div>{{ad.cp[0]}}</div>
+          <div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" >{{ad.title[0]}}</div>
+        </div>
+      </div>
+
+      <div class="col-30">
+        <div class="card" >
+          <div><img width="100%" height=220px ng-src="{{ad.url[1]}}" ng-click="myCheck()"/></div>
+          <div>{{ad.cp[1]}}</div>
+          <div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" >{{ad.title[1]}}</div>
+
+        </div>
+      </div>
+
+      <div class="col-30">
+        <div class="card" >
+          <div><img width="100%" height=220px ng-src="{{ad.url[2]}}" ng-click="myCheck()"/></div>
+          <div>{{ad.cp[2]}}</div>
+          <div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" >
+            {{ad.title[2]}}
+          </div>
+
+        </div>
+      </div>
+    </div>
+</ion-slide>
+</ion-slide-box>
+</div>
+
+</ion-content>
+</ion-view>

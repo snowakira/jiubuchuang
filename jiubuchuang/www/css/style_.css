@@ -1,0 +1,81 @@
+/* Exhibition.html */
+.Info {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: block;
+  padding: 5px;
+  width: 50%;
+  color: #646464;
+}
+
+.Img {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: block;
+  padding: 5px;
+  width: 60%;
+  height: 220px;
+   }
+
+.Img Img {
+    height: 100%;
+    width: 100%;
+  }
+
+
+.more{
+  float: right;
+}
+.more a{
+  text-decoration: none;
+  color: white;
+  font-size: smaller;
+}
+
+.col a{
+  text-decoration: none;
+  color: #7B68EE;
+}
+
+.col span{
+  margin-left: 5px;
+}
+
+/* Tickect.html*/
+.ticket {
+  font-size: smaller;
+  }
+
+.fullscreen{
+  width: 100%;
+  height: 600px;
+  background-image: url(../img/8543_n.jpg);
+}
+
+.code{
+clear:both;
+float:left;
+width:100%;
+height:100%;
+padding-top:100px;
+text-align:center;
+border-left:1px #ccc solid;
+border-right:1px #ccc solid;
+border-bottom:1px #ccc solid;
+}
+
+.code img{
+height: 150px;
+width:  150px;
+margin:  auto;
+clear: both;
+
+}

@@ -1,0 +1,14 @@
+<ion-view view-title="行程">
+	<ion-nav-buttons side="left">
+        <a class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="app.tabs.profile"></a>
+    </ion-nav-buttons>
+    <ion-content>
+          <ion-list type ='card'>
+    		<ion-item ng-repeat= "journey in journeys">
+    			<p> 日期：{{journey.startDate}}</p>
+    			<p> 主题：{{journey.subject}}</P>
+    			<p> 画廊地址：{{journey.address}}</p>
+    		</ion-item>
+    	</ion-list>
+    </ion-content>
+</ion-view>

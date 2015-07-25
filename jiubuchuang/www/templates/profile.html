@@ -1,0 +1,45 @@
+<ion-view view-title="个人中心">
+    <ion-content>
+        <ion-list type='card'>
+            <ion-item class="row">
+                <div class="col"  ui-sref="app.Jourlist" nav-transition="ios">
+                    <a>
+                        <p><h2>行程</h2></p>
+                        <i class="icon ion-android-list"></i> {{user.JourNo}}
+                    </a>
+                </div>
+                <div class="col"  ui-sref="app.favlist" nav-transition="ios" >
+                    <a>
+                        <p><h2>喜欢</h2></p>
+                        <i class="icon ion-ios-heart" href = ""></i> {{user.favNo}}
+                    </a>
+                </div>
+                <div class="col"  ui-sref="app.notificationlist" nav-transition="ios">
+                    <a>
+                        <p><h2>通知</h2></p>
+                        <i class="icon ion-chatbox-working" href = ""></i> {{user.NotificationNo}}
+                    </a>
+                </div>
+            </ion-item>
+            <ion-item class="item item-body">
+                <h2>可订阅</h2>
+                <div class = "row">
+                    <div class = "col col-33 col-center button button-positive button-clear" on-tap = "setSubscribe(0)">山水</div>
+                    <div class = "col col-33 col-center button button-positive button-clear" on-tap = "setSubscribe(1)">人物</div>
+                    <div class = "col col-33 col-center button button-positive button-clear" on-tap = "setSubscribe(2)">花鸟</div>
+                </div>
+                <div class = "row">
+                    <div class = "col col-33 col-center button button-positive button-clear" on-tap = "setSubscribe(3)">油画</div>
+                    <div class = "col col-33 col-center button button-positive button-clear" on-tap = "setSubscribe(4)">水墨画</div>
+                    <div class = "col col-33 col-center button button-positive button-clear" on-tap = "setSubscribe(5)">国画</div>
+                </div>
+            </ion-item>
+             <ion-item class="item item-body">
+                <h2>已订阅</h2>
+                <div class = "row">
+                    <div class = "col col-33 col-center button button-positive button-clear">{{user.favorCategory}}</div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

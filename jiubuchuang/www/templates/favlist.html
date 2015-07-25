@@ -1,0 +1,17 @@
+<ion-view view-title="收藏">
+	<ion-nav-buttons side="left">
+        <a class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="app.tabs.profile"></a>
+    </ion-nav-buttons>
+ 	<ion-content>
+    	<ion-list type ='card'>
+    		<ion-item class = "item item-thumbnail-left" ng-repeat = "favorite in favorites">
+    			<img ng-src="{{favorite.Art.posterThumbnailURL}}">
+    			<p> 作者：{{favorite.Art.artist.name}}</p>
+    			<p> 类别：{{favorite.Art.cateName}}</P>
+    			<p>作品：《{{favorite.Art.title}}》</p>
+    			<p>	价格：{{favorite.Art.price}}</p>	
+    			<p>	描述：{{favorite.Art.decsription}}</p>	
+    		</ion-item>
+    	</ion-list>
+    </ion-content>
+</ion-view>
